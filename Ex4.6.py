@@ -1,3 +1,4 @@
+# cumputepay function determines if hours > 40 and applies a pay rate to pay for overtime
 def computepay(hours, rate):
     if hours > 40.0:
         overtime_rate = rate * 1.5
@@ -7,15 +8,11 @@ def computepay(hours, rate):
         pay = hours * rate
 
     return pay
+
 hours = input('How many hours did you work?: ')
 rate = input('What is your hourly rate?: ')
+f_hours = float(hours)
+f_rate = float(rate)
 
-try:
-    f_hours = float(hours)
-    f_rate = float(rate)
-except:
-    print('Please enter a numeric')
-    quit()
-
-computepay(f_hours, f_rate)
-print('You have earned: $',pay)
+x = computepay(f_hours, f_rate)
+print('You have earned: $', x)
